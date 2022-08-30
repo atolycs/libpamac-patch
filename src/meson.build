@@ -30,7 +30,7 @@ libpamac_sources = ['package.vala', 'alpm_package.vala',
 libpamac_dependencies = [alpm_deps, math, json, appstream, libsoup, gmodule]
 
 if get_option('enable-snap')
-	snapd = dependency('snapd-glib')
+	snapd = dependency('snapd-glib-2')
 
 	libpamac_snap = library('pamac-snap',
 		sources: ['snap_interface.vala', 'snap_plugin.vala', 'package.vala'],
